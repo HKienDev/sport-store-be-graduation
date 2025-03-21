@@ -17,6 +17,6 @@ router.get("/:id", getProductById);
 // Private/Admin Routes (Chỉ admin mới có quyền thực hiện)
 router.post("/", verifyUser, verifyAdmin, createProduct);
 router.put("/:id", verifyUser, verifyAdmin, updateProduct);
-router.delete("/:id", verifyUser, verifyAdmin, deleteProduct);
+router.delete("/admin/:id", verifyUser, verifyAdmin, deleteProduct);
 
 export default router;
